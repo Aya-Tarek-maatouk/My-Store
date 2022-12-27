@@ -1,0 +1,13 @@
+.successfull-checkout-content {
+    text-align: center;
+    margin-top: 10%;
+    font-size: x-large;
+}
+
+.successfull-checkout-content div {
+    margin: 30px;
+}
+
+b {
+    color: burlywood;
+}

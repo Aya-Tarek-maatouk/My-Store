@@ -1,0 +1,33 @@
+.display-block {
+    display: block !important;
+}
+
+.margin-10-px {
+    margin: 10px;
+}
+
+.checkout-form-card {
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 10%;
+    text-align: center;
+}
+
+.checkout-form-card mat-card-header {
+    margin-bottom: 20px;
+}
+
+.checkout-form-card-note {
+    margin-top: 20px;
+}
+
+.checkout-form-card-info{
+    color: var(--mdc-theme-error, #f44336);
+}

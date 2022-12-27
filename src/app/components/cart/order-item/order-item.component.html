@@ -1,0 +1,44 @@
+<div class="order-item-container" fxLayout="row" fxLayoutAlign="space-between  center">
+
+    <div class="order-item-right-side">
+
+        <mat-card class="order-item-right-side-img">
+            <img mat-card-image class="product-card-img" src="{{item.product.url}}">
+        </mat-card>
+
+    </div>
+
+    <div class="order-item-left-side">
+
+        <div class="order-item-left-side-items">
+
+            <div class="order-item-card-name  padding-left-8-px">
+                <h2>{{item.product.name}}</h2>
+            </div>
+
+            <div class="order-item-card-price  padding-left-8-px">
+                {{item.product.price | currency}}
+            </div>
+
+            <div class="order-item-card-amount  padding-left-8-px">
+
+                <mat-label>Amount: </mat-label>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="item.ProductAmount" disabled>
+                </mat-form-field>
+
+            </div>
+
+            <div class=" padding-left-8-px">
+                <button (click)="RemoveFromCart()" mat-raised-button color="primary"
+                    aria-label="Example icon button with a delete icon">
+                    <span>Remove</span>
+                    <mat-icon>remove_shopping_cart</mat-icon>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

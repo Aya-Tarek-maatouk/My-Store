@@ -1,0 +1,33 @@
+<p>
+    <mat-toolbar class="nav-bar-container">
+
+        <div class="nav-bar-left-side">
+
+            <span>
+
+                <span class="nav-bar-left-side-logo">
+                    <span>My Store</span>
+                   <!-- <mat-icon>bubble_chart</mat-icon>-->
+                </span>
+            </span>
+
+        </div>
+
+        <div class="nav-bar-right-side">
+
+            <span>
+                <a routerLink="/" mat-button> Product List </a>
+            </span>
+            <span>
+                <a routerLink="/ShoppingCart" mat-button>
+                    <mat-icon>shopping_cart</mat-icon>
+                    <span>Cart</span>
+                    <span matBadgePosition="above before" [matBadge]="_badgeCounter" mat-raised-button
+                        matBadgeColor="accent"></span>
+                </a>
+            </span>
+
+        </div>
+
+    </mat-toolbar>
+</p>

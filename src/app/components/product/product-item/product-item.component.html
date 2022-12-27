@@ -1,0 +1,30 @@
+<mat-card class="product-card">
+
+    <img mat-card-xl-image (click)="GotoProductDetails()" class="product-card-img" src="{{cartItem.product.url}}">
+    <mat-card-content>
+
+        <div class="product-card-name">{{cartItem.product.name}}</div>
+        <div class="product-card-price">{{cartItem.product.price | currency}}</div>
+
+        <mat-form-field class="product-card-Amount">
+
+            <mat-select [(ngModel)]="cartItem.ProductAmount">
+
+                <mat-option [value]=1>1</mat-option>
+                <mat-option [value]=2>2</mat-option>
+                <mat-option [value]=3>3</mat-option>
+                <mat-option [value]=4>4</mat-option>
+                <mat-option [value]=5>5</mat-option>
+            </mat-select>
+
+        </mat-form-field>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="AddToShoppingCart()" mat-raised-button color="primary">
+            <span>Add To Cart</span>
+            <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

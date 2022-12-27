@@ -1,0 +1,83 @@
+<mat-card class="checkout-form-card">
+
+    <mat-card-header>
+        <mat-card-title>Submit Your Order</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <form #myForm="ngForm" (ngSubmit)="CheckOut()" class="checkout-form">
+
+            <div class="ValidationSummary" *ngIf="Displaynotes">
+                <span class="checkout-form-card-info" > {{Displaynotes}}</span>
+               
+            
+            </div>
+
+            <!--fullName-->
+            <mat-form-field class="display-block margin-10-px">
+                <!--lable-->
+                <mat-label>Full Name</mat-label>
+                <!--input-->
+                <input matInput required minlength="3" name="fullName" #full_Name="ngModel" [(ngModel)]="fullName"
+                (ngModelChange)="Validate('fullName',myForm)"
+                    placeholder="(min 3 characters)">
+
+                <!--mat-error-->
+                <mat-error *ngIf="full_Name.errors?.['required']">
+                    please enter your full name
+                </mat-error>
+
+                <mat-error *ngIf="full_Name.errors?.['minlength']">
+                    please enter valid name
+                </mat-error>
+
+            </mat-form-field>
+
+            <!--address-->
+            <mat-form-field class="display-block margin-10-px">
+                <!--lable-->
+                <mat-label>Address</mat-label>
+                <!--input-->
+                <input matInput required minlength="6" name="address" #Addres="ngModel" [(ngModel)]="address"
+                (ngModelChange)="Validate('address',myForm)"
+                    placeholder="(min 6 characters)">
+                <!--mat-error-->
+                <mat-error *ngIf="Addres.errors?.['required']">
+                    please enter your address
+                </mat-error>
+
+                <mat-error *ngIf="Addres.errors?.['minlength']">
+                    please enter valid address
+                </mat-error>
+
+            </mat-form-field>
+
+            <!--Credit Card Number-->
+            <mat-form-field class="display-block margin-10-px">
+
+                <!--lable-->
+                <mat-label>Credit Card Number</mat-label>
+                <!--input-->
+                <input matInput required pattern="[0-9]{16}" maxlength="16" #creditCard="ngModel" name="creditCardNumber"
+                    [(ngModel)]="creditCardNumber" (ngModelChange)="Validate('creditCardNumber',myForm)" placeholder="(16-digit number)">
+                <!--mat-error-->
+                <mat-error *ngIf="creditCard.errors?.['required']">
+                    please enter your credit card number
+                </mat-error>
+                <mat-error *ngIf="creditCard.errors?.['pattern']">
+                    please enter valid credit card number
+                </mat-error>
+
+            </mat-form-field>
+
+            <div class="checkout-form-card-note">
+                <h5>we will never share your payment details with any one else</h5>
+            </div>
+
+            <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary">Submit</button>
+
+        </form>
+
+    </mat-card-content>
+</mat-card>

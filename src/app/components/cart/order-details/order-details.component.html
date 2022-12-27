@@ -1,0 +1,15 @@
+<div class="order-details">
+
+    <div class="order-details-items">
+        <app-order-item class="order-details-item" *ngFor="let _item of ShoppingCartDetails.CartItems" [item]="_item"
+            (RemoveItemFromCart)="RemoveFromCart($event)">
+        </app-order-item>
+    </div>
+
+    <div class="order-details-totalPrice">
+        <span>
+            <h1> Total:{{ShoppingCartDetails.TotalPrice |currency}}</h1>
+        </span>
+    </div>
+
+</div>

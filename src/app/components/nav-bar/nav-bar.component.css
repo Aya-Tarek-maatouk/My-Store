@@ -1,0 +1,28 @@
+.nav-bar-left-side,
+.nav-bar-right-side {
+    display: inline-block;
+    color: #673ab7 !important;
+}
+
+.nav-bar-left-side {
+    margin-left: 5%;
+
+}
+
+.nav-bar-left-side-logo {
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    
+
+}
+
+.nav-bar-right-side {
+    margin-left: 65%;
+}
+
+
+.nav-bar-right-side span a {
+    padding: 9% 10%;
+    min-width: 150px;
+    font-size: large;
+}

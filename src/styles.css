@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+body,
+.mdc-button,
+.mat-mdc-card-title,
+.mdc-text-field .mdc-floating-label,
+.mat-mdc-dialog-container .mdc-dialog__content,
+.mat-mdc-dialog-container .mdc-dialog__title,
+.mat-mdc-form-field-error,
+.mat-mdc-select,
+.mat-mdc-option {
+    font-family: 'Pacifico', cursive !important;
+}

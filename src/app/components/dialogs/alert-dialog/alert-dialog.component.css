@@ -1,0 +1,8 @@
+.alert-dialog-content {
+    padding: 10px;
+}
+
+.alert-dialog-content-message h3 {
+    color: #311B92;
+    font-weight: 500;
+}

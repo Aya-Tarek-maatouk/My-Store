@@ -1,0 +1,35 @@
+.order-item-left-side,
+.order-item-right-side {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.order-item-left-side {
+    margin: auto 0;
+    padding-top: 20px;
+}
+
+.order-item-right-side-img {
+    max-width: 200px;
+}
+
+.order-item-right-side-img img {
+    padding: 5px;
+}
+
+.order-item-card-price {
+    margin-bottom: 5px;
+}
+
+.order-item-card-Amount {
+    max-width: 120px;
+}
+
+.order-item-card-amount mat-form-field {
+    max-width: 100px;
+}
+
+.padding-left-8-px {
+    padding-left: 8px;
+}
